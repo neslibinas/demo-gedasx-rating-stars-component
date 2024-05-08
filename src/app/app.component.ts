@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'test1';
+
+  selectedNumberOfStarts: 0 | 1 | 2 | 3 | 4 | 5 = 3;
+  isEnabled: boolean = true;
+  size: number = 50;
+
+
+  changeNumber($event: any) {
+    this.selectedNumberOfStarts = $event;
+  }
 }
